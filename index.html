@@ -13,26 +13,26 @@ html,body{height:100%;overflow:hidden;background:#000;color:#fff;font-family:-ap
 .bg .ov{position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.3),rgba(0,0,0,.65))}
 .bg .gr{position:absolute;top:0;right:0;bottom:0;left:0;opacity:.03;background-image:linear-gradient(rgba(0,220,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0,220,255,.5) 1px,transparent 1px);background-size:60px 60px}
 .content{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;padding:clamp(10px,2vmin,24px) clamp(12px,2.5vmin,32px) clamp(8px,1.5vmin,16px)}
-.top-section{flex:0 0 50%;display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vmin,32px);min-height:0}
+.top-section{flex:0 0 50%;display:flex;align-items:center;justify-content:space-between;min-height:0}
 .clock-section{display:flex;flex-direction:column;align-items:center;gap:clamp(2px,.5vmin,6px)}
 .clock-row{display:flex;align-items:center;gap:clamp(10px,2vmin,20px)}
-.city-label{font-size:clamp(9px,1.3vmin,13px);color:rgba(0,220,255,.6);text-transform:uppercase;letter-spacing:.12em;font-weight:500}
-.date-label{font-size:clamp(8px,1.1vmin,12px);color:rgba(255,255,255,.3)}
-.aclock{width:clamp(120px,18vmin,210px);height:clamp(120px,18vmin,210px);border-radius:50%;border:2px solid rgba(255,255,255,.15);position:relative;background:rgba(0,0,0,.25);flex-shrink:0}
-.aclock .tick{position:absolute;top:4px;left:50%;width:1px;height:8px;margin-left:-.5px;background:rgba(255,255,255,.2)}
-.aclock .tick.major{height:12px;width:2px;margin-left:-1px;background:rgba(255,255,255,.45)}
-.aclock .num{position:absolute;font-weight:300;color:rgba(255,255,255,.4);text-align:center}
+.city-label{font-size:clamp(10px,1.5vmin,14px);color:#00dcff;text-transform:uppercase;letter-spacing:.12em;font-weight:500}
+.date-label{font-size:clamp(9px,1.2vmin,13px);color:rgba(0,220,255,.7)}
+.aclock{width:clamp(150px,26vmin,300px);height:clamp(150px,26vmin,300px);border-radius:50%;border:2px solid rgba(0,220,255,.3);position:relative;background:rgba(0,0,0,.3);flex-shrink:0}
+.aclock .tick{position:absolute;top:4px;left:50%;width:1px;height:8px;margin-left:-.5px;background:rgba(255,255,255,.35)}
+.aclock .tick.major{height:14px;width:2px;margin-left:-1px;background:rgba(255,255,255,.7)}
+.aclock .num{position:absolute;font-weight:400;color:rgba(255,255,255,.75);text-align:center}
 .aclock .hand{position:absolute;bottom:50%;left:50%;transform-origin:bottom center;border-radius:2px}
 .aclock .center{position:absolute;top:50%;left:50%;border-radius:50%;background:rgba(0,220,255,.9)}
-.digi{font-size:clamp(26px,4.5vmin,52px);font-weight:200;letter-spacing:.05em;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.9);line-height:1}
+.digi{font-size:clamp(30px,5.5vmin,64px);font-weight:200;letter-spacing:.05em;font-variant-numeric:tabular-nums;color:#fff;line-height:1}
 .digi .colon{animation:cpulse 1s ease-in-out infinite;display:inline-block}
 @keyframes cpulse{0%,100%{opacity:.4}50%{opacity:1}}
-.weather-summary{display:flex;flex-direction:column;align-items:center;gap:0;text-align:center;justify-content:center}
+.weather-summary{display:flex;flex-direction:column;align-items:flex-end;gap:0;text-align:right;justify-content:center}
 .ws-temp{font-size:clamp(36px,7vmin,72px);font-weight:100;line-height:1;font-variant-numeric:tabular-nums}
 .ws-desc{font-size:clamp(11px,1.8vmin,18px);color:rgba(255,255,255,.6);margin-top:2px}
 .ws-icon{font-size:clamp(22px,3.5vmin,38px);line-height:1;margin-bottom:2px}
 .ws-feels{font-size:clamp(9px,1.4vmin,13px);color:rgba(255,255,255,.35);margin-top:clamp(2px,.5vmin,6px)}
-.ws-details{display:flex;gap:clamp(8px,1.5vmin,18px);margin-top:clamp(4px,.8vmin,8px);flex-wrap:wrap;justify-content:center}
+.ws-details{display:flex;gap:clamp(8px,1.5vmin,18px);margin-top:clamp(4px,.8vmin,8px);flex-wrap:wrap;justify-content:flex-end}
 .ws-detail{font-size:clamp(9px,1.3vmin,12px);color:rgba(255,255,255,.4);display:flex;align-items:center;gap:3px}
 .ws-detail b{color:rgba(255,255,255,.6);font-weight:500}
 .tabs{display:flex;gap:2px;flex-shrink:0;margin-top:clamp(4px,1vmin,10px);border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:0}
@@ -46,7 +46,7 @@ html,body{height:100%;overflow:hidden;background:#000;color:#fff;font-family:-ap
 .hcard{width:100%;padding:clamp(4px,.6vmin,8px) clamp(2px,.3vmin,4px);border-radius:8px;background:rgba(255,255,255,.04);text-align:center;display:flex;flex-direction:column;align-items:center;gap:clamp(2px,.3vmin,3px);transition:background .2s;justify-content:center}
 .hcard:hover{background:rgba(255,255,255,.08)}
 .hcard.now{background:rgba(0,220,255,.1);border:1px solid rgba(0,220,255,.2)}
-.hcard-time{font-size:clamp(7px,1vmin,9px);color:rgba(255,255,255,.35)}
+.hcard-time{font-size:clamp(7px,1vmin,9px);color:#00dcff}
 .hcard-icon{font-size:clamp(14px,2.2vmin,18px);line-height:1}
 .hcard-temp{font-size:clamp(10px,1.4vmin,13px);font-weight:500;font-variant-numeric:tabular-nums}
 .hcard-precip{font-size:clamp(6px,.9vmin,8px);color:rgba(0,180,255,.6)}
@@ -64,27 +64,27 @@ html,body{height:100%;overflow:hidden;background:#000;color:#fff;font-family:-ap
 .wmax{width:clamp(20px,2.5vmin,26px);font-size:clamp(9px,1.3vmin,11px);color:rgba(255,255,255,.65);font-variant-numeric:tabular-nums;flex-shrink:0}
 .aqi-big{display:flex;align-items:center;gap:clamp(10px,1.5vmin,16px);margin-bottom:clamp(8px,1.2vmin,12px)}
 .aqi-num{font-size:clamp(28px,5vmin,48px);font-weight:100;font-variant-numeric:tabular-nums;line-height:1}
-.aqi-lbl{font-size:clamp(8px,1.2vmin,12px);color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.05em}
+.aqi-lbl{font-size:clamp(8px,1.2vmin,12px);color:#00dcff;text-transform:uppercase;letter-spacing:.05em}
 .aqi-lvl{font-size:clamp(10px,1.5vmin,15px);font-weight:500;margin-top:2px}
-.aqi-dsc{font-size:clamp(8px,1.1vmin,11px);color:rgba(255,255,255,.25);margin-top:4px;line-height:1.5}
+.aqi-dsc{font-size:clamp(8px,1.1vmin,11px);color:rgba(0,220,255,.6);margin-top:4px;line-height:1.5}
 .poll-grid{display:flex;flex-wrap:wrap;gap:clamp(6px,1vmin,12px)}
 .poll-item{background:rgba(255,255,255,.04);border-radius:6px;padding:clamp(6px,.8vmin,9px) clamp(8px,1vmin,12px);min-width:clamp(70px,10vmin,100px)}
-.poll-name{font-size:clamp(6px,.9vmin,9px);color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.poll-name{font-size:clamp(6px,.9vmin,9px);color:#00dcff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
 .poll-val{font-size:clamp(10px,1.5vmin,16px);color:rgba(255,255,255,.7);font-weight:500;font-variant-numeric:tabular-nums}
 .poll-unit{font-size:clamp(6px,.8vmin,9px);color:rgba(255,255,255,.2);margin-left:2px}
 .sun-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:clamp(4px,.8vmin,8px)}
 .sun-item{text-align:center}
-.sun-item-label{font-size:clamp(7px,1.1vmin,10px);color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.08em}
+.sun-item-label{font-size:clamp(7px,1.1vmin,10px);color:#00dcff;text-transform:uppercase;letter-spacing:.08em}
 .sun-item-time{font-size:clamp(12px,2vmin,18px);font-weight:500;font-variant-numeric:tabular-nums;margin-top:2px}
 .sun-mid{text-align:center}
-.sun-mid-label{font-size:clamp(7px,1vmin,9px);color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.05em}
+.sun-mid-label{font-size:clamp(7px,1vmin,9px);color:#00dcff;text-transform:uppercase;letter-spacing:.05em}
 .sun-mid-val{font-size:clamp(9px,1.4vmin,13px);color:rgba(255,255,255,.5);font-variant-numeric:tabular-nums}
 .sun-arc{margin:clamp(4px,.6vmin,8px) 0}
 .sun-arc svg{width:100%;height:clamp(40px,6vmin,60px);display:block}
 .sun-remain{text-align:center;margin-bottom:clamp(6px,1vmin,10px)}
-.sun-remain-lbl{font-size:clamp(7px,1vmin,9px);color:rgba(255,255,255,.2);text-transform:uppercase;letter-spacing:.05em}
+.sun-remain-lbl{font-size:clamp(7px,1vmin,9px);color:#00dcff;text-transform:uppercase;letter-spacing:.05em}
 .sun-remain-val{font-size:clamp(9px,1.3vmin,12px);color:rgba(251,191,36,.6);font-variant-numeric:tabular-nums}
-.sun-wk-label{font-size:clamp(7px,1.1vmin,9px);color:rgba(255,255,255,.2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.sun-wk-label{font-size:clamp(7px,1.1vmin,9px);color:#00dcff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
 .sun-wk-row{display:flex;justify-content:space-between;font-size:clamp(8px,1.2vmin,11px);padding:clamp(1px,.2vmin,2px) 0}
 .sun-wk-day{color:rgba(255,255,255,.3);width:clamp(38px,5vmin,52px)}
 .sun-wk-day.today{color:rgba(0,220,255,.6)}
@@ -370,7 +370,7 @@ function renderWeather() {
 }
 
 function card(icon, label, value) {
-  return '<div style="background:rgba(255,255,255,.04);border-radius:10px;padding:clamp(8px,1.4vmin,16px) clamp(8px,1.2vmin,14px);display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-size:clamp(8px,1.2vmin,10px);color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.05em;margin-bottom:clamp(3px,.5vmin,6px)">' + icon + ' ' + label + '</div><div style="font-size:clamp(14px,2.2vmin,20px);color:rgba(255,255,255,.8);font-weight:500;white-space:nowrap">' + value + '</div></div>';
+  return '<div style="background:rgba(255,255,255,.04);border-radius:10px;padding:clamp(8px,1.4vmin,16px) clamp(8px,1.2vmin,14px);display:flex;flex-direction:column;justify-content:center;overflow:hidden"><div style="font-size:clamp(8px,1.2vmin,10px);color:#00dcff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:clamp(3px,.5vmin,6px)">' + icon + ' ' + label + '</div><div style="font-size:clamp(14px,2.2vmin,20px);color:rgba(255,255,255,.8);font-weight:500;white-space:nowrap">' + value + '</div></div>';
 }
 
 function renderCurrentTab(c, wi) {
