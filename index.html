@@ -14,17 +14,18 @@ html,body{height:100%;overflow:hidden;background:#000;color:#fff;font-family:-ap
 .bg .gr{position:absolute;top:0;right:0;bottom:0;left:0;opacity:.03;background-image:linear-gradient(rgba(0,220,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(0,220,255,.5) 1px,transparent 1px);background-size:60px 60px}
 .content{position:relative;z-index:1;display:flex;flex-direction:column;height:100%;padding:clamp(10px,2vmin,24px) clamp(12px,2.5vmin,32px) clamp(8px,1.5vmin,16px)}
 .top-section{flex:0 0 50%;display:flex;align-items:center;justify-content:space-between;min-height:0}
-.clock-section{display:flex;flex-direction:column;align-items:center;gap:clamp(2px,.5vmin,6px)}
-.clock-row{display:flex;align-items:center;gap:clamp(10px,2vmin,20px)}
+.clock-section{display:flex;flex-direction:column;align-items:stretch;gap:clamp(2px,.5vmin,6px);flex:1;min-width:0}
+.clock-row{display:flex;align-items:center;gap:clamp(10px,2vmin,20px);flex:1;min-height:0}
 .city-label{font-size:clamp(10px,1.5vmin,14px);color:#00dcff;text-transform:uppercase;letter-spacing:.12em;font-weight:500}
-.date-label{font-size:clamp(9px,1.2vmin,13px);color:rgba(0,220,255,.7)}
+.digi-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:0;gap:clamp(2px,.5vmin,6px)}
+.date-label{font-size:clamp(11px,1.8vmin,18px);color:#00dcff;font-weight:400;letter-spacing:.04em}
 .aclock{width:clamp(150px,26vmin,300px);height:clamp(150px,26vmin,300px);border-radius:50%;border:2px solid rgba(0,220,255,.3);position:relative;background:rgba(0,0,0,.3);flex-shrink:0}
 .aclock .tick{position:absolute;top:4px;left:50%;width:1px;height:8px;margin-left:-.5px;background:rgba(255,255,255,.35)}
 .aclock .tick.major{height:14px;width:2px;margin-left:-1px;background:rgba(255,255,255,.7)}
 .aclock .num{position:absolute;font-weight:400;color:rgba(255,255,255,.75);text-align:center}
 .aclock .hand{position:absolute;bottom:50%;left:50%;transform-origin:bottom center;border-radius:2px}
 .aclock .center{position:absolute;top:50%;left:50%;border-radius:50%;background:rgba(0,220,255,.9)}
-.digi{font-size:clamp(30px,5.5vmin,64px);font-weight:200;letter-spacing:.05em;font-variant-numeric:tabular-nums;color:#fff;line-height:1}
+.digi{font-size:clamp(48px,12vmin,140px);font-weight:200;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:#fff;line-height:1}
 .digi .colon{animation:cpulse 1s ease-in-out infinite;display:inline-block}
 @keyframes cpulse{0%,100%{opacity:.4}50%{opacity:1}}
 .weather-summary{display:flex;flex-direction:column;align-items:flex-end;gap:0;text-align:right;justify-content:center}
@@ -106,7 +107,7 @@ html,body{height:100%;overflow:hidden;background:#000;color:#fff;font-family:-ap
         <div class="city-label">Екатеринбург</div>
         <div class="clock-row">
           <div class="aclock" id="aclock"></div>
-          <div><div class="digi" id="digi">--:--:--</div><div class="date-label" id="datelabel">--</div></div>
+          <div class="digi-wrap"><div class="digi" id="digi">--:--:--</div><div class="date-label" id="datelabel">--</div></div>
         </div>
       </div>
       <div class="weather-summary" id="wsummary">
